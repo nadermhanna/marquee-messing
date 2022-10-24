@@ -17,10 +17,9 @@ class CustomStyleSheet {
       ...(selector ? { selector } : {}),
       ...(properties
         ? {
-            properties: Array.from(new Set([
-              ...this.styles[id].properties,
-              ...properties,
-            ])),
+            properties: Array.from(
+              new Set([...this.styles[id].properties, ...properties])
+            ),
           }
         : {}),
     };

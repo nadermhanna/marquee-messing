@@ -38,22 +38,6 @@ body {
   overflow: hidden;
 }
 
-.segment:nth-child(2) {
-  animation-delay: calc(var(--animation-duration) / 5 * 1);
-}
-
-.segment:nth-child(3) {
-  animation-delay: calc(var(--animation-duration) / 5 * 2);
-}
-
-.segment:nth-child(4) {
-  animation-delay: calc(var(--animation-duration) / 5 * 3);
-}
-
-.segment:nth-child(5) {
-  animation-delay: calc(var(--animation-duration) / 5 * 4);
-}
-
 @keyframes moveAccross {
   from {
     left: calc(-1 * var(--seg-width));
