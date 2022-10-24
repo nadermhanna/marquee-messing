@@ -3,12 +3,15 @@
 number of segments = container_width / segment_width + 1
 
 */
+
+let stylesheet = new CustomStyleSheet(document, "marquee");
+
 const dataEl = document.querySelector(".data");
 
 const containerEl = document.querySelector(".container");
-const containerElWidth = containerEl.offsetWidth;
-
 const segmentEl = document.querySelector(".original");
+
+const containerElWidth = containerEl.offsetWidth;
 const segmentElWidth = segmentEl.offsetWidth;
 
 const numberOfSegments = containerElWidth / segmentElWidth + 1;
