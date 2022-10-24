@@ -8,14 +8,21 @@ let stylesheet = new CustomStyleSheet(document, "marquee");
 
 const dataEl = document.querySelector(".data");
 
-const containerEl = document.querySelector(".container");
-const segmentEl = document.querySelector(".original");
+const ribbonEl = document.querySelector(".ribbon");
+const segmentEl = document.querySelector(".segment");
 
-const containerElWidth = containerEl.offsetWidth;
+const ribbonElWidth = ribbonEl.offsetWidth;
 const segmentElWidth = segmentEl.offsetWidth;
+const newRibbonWidth =
+  Math.ceil(ribbonElWidth / segmentElWidth) * segmentElWidth;
 
-const numberOfSegments = containerElWidth / segmentElWidth + 1;
+const numberOfSegmentsToBuild = Math.ceil(ribbonElWidth / segmentElWidth) + 1;
 
-dataEl.innerHTML = `container width: ${containerElWidth}px`;
+for (let i = 0; i < numberOfSegmentsToBuild; i++) {
+  ribbonEl.appendChild(segmentEl.cloneNode(true));
+}
+
+dataEl.innerHTML = `current ribbon width: ${ribbonElWidth}px`;
 dataEl.innerHTML = `${dataEl.innerHTML} || segment width: ${segmentElWidth}px`;
-dataEl.innerHTML = `${dataEl.innerHTML} || num of segments: ${numberOfSegments}`;
+dataEl.innerHTML = `${dataEl.innerHTML} || num of segments: ${numberOfSegmentsToBuild}`;
+dataEl.innerHTML = `${dataEl.innerHTML} || new ribbon width: ${newRibbonWidth}`;

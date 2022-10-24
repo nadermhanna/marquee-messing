@@ -17,8 +17,13 @@ body {
   height: 100px;
   margin-left: 10vw;
   margin-top: 40px;
-  overflow: hidden;
+}
+
+.ribbon {
+  min-width: 100%;
   position: relative;
+  height: 100%;
+  overflow: hidden;
 }
 
 .segment {
@@ -33,19 +38,19 @@ body {
   overflow: hidden;
 }
 
-.seg-2 {
+.segment:nth-child(2) {
   animation-delay: calc(var(--animation-duration) / 5 * 1);
 }
 
-.seg-3 {
+.segment:nth-child(3) {
   animation-delay: calc(var(--animation-duration) / 5 * 2);
 }
 
-.seg-4 {
+.segment:nth-child(4) {
   animation-delay: calc(var(--animation-duration) / 5 * 3);
 }
 
-.seg-5 {
+.segment:nth-child(5) {
   animation-delay: calc(var(--animation-duration) / 5 * 4);
 }
 
