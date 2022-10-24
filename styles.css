@@ -1,0 +1,59 @@
+:root {
+  --seg-width: 25%;
+  --animation-duration: 10s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: yellow;
+}
+
+.container {
+  width: 80vw;
+  height: 100px;
+  margin-left: 10vw;
+  margin-top: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.segment {
+  width: var(--seg-width);
+  position: absolute;
+  left: calc(-1 * var(--seg-width));
+  top: 0;
+  background-color: black;
+  border: 2px solid yellow;
+  padding: 0 10px;
+  animation: var(--animation-duration) moveAccross infinite linear;
+  overflow: hidden;
+}
+
+.seg-2 {
+  animation-delay: calc(var(--animation-duration) / 5 * 1);
+}
+
+.seg-3 {
+  animation-delay: calc(var(--animation-duration) / 5 * 2);
+}
+
+.seg-4 {
+  animation-delay: calc(var(--animation-duration) / 5 * 3);
+}
+
+.seg-5 {
+  animation-delay: calc(var(--animation-duration) / 5 * 4);
+}
+
+@keyframes moveAccross {
+  from {
+    left: calc(-1 * var(--seg-width));
+  }
+  to {
+    left: 100%;
+  }
+}
