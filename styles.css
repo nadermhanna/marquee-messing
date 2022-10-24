@@ -19,17 +19,21 @@ body {
   margin-top: 40px;
 }
 
+.viewport {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 .ribbon {
-  min-width: 100%;
   position: relative;
   height: 100%;
   overflow: hidden;
 }
 
 .segment {
-  width: var(--seg-width);
   position: absolute;
-  left: calc(-1 * var(--seg-width));
+  /* left: calc(-1 * var(--seg-width)); */
   top: 0;
   background-color: black;
   border: 2px solid yellow;
@@ -40,7 +44,7 @@ body {
 
 @keyframes moveAccross {
   from {
-    left: calc(-1 * var(--seg-width));
+    left: -465px;
   }
   to {
     left: 100%;
